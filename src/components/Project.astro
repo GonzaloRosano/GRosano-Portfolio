@@ -1,0 +1,51 @@
+---
+const projects = [
+  {
+    title: 'Obtención de Personaje Aleatorio de Rick and Morty',
+    description:
+      'Aplicación web desarrollada en PHP que consume una API existente para obtener y mostrar un personaje aleatorio de la serie Rick and Morty.',
+    technologies: 'PHP, API de Rick and Morty',
+    link: '#',
+  },
+  {
+    title: 'HowlOS and HowlOS-API',
+    description:
+      'Proyecto que permite obtener datos del dispositivo que ejecuta la aplicación y visualizarlos mediante React. Incluye tanto el backend como el frontend, con la capacidad de manejar archivos desde una ruta especificada.',
+    technologies: 'React, API, Node.js (para backend)',
+    link: '#',
+  },
+  {
+    title: 'Factory Team',
+    description:
+      'Web con el fin de mostrar integrantes e información de los mismos de forma rápida.',
+    technologies: 'Astro',
+    link: 'https://github.com/GonzaloRosano/FactoryTeam',
+  },
+];
+---
+
+<section id="projects" class="py-8">
+  <div class="container mx-auto">
+    <h2 class="text-3xl font-bold mb-6">Últimos Proyectos</h2>
+    <div class="space-y-8">
+      {
+        projects.map((project) => (
+          <div class="bg-white p-6 shadow-md rounded">
+            <h3 class="text-2xl font-semibold mb-2">{project.title}</h3>
+            <p class="mb-2">{project.description}</p>
+            <p class="mb-4">
+              <strong>Tecnologías Utilizadas:</strong> {project.technologies}
+            </p>
+            <a
+              href={project.link}
+              class="text-blue-500 hover:underline"
+              target="_blank"
+            >
+              Enlace al Proyecto
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
